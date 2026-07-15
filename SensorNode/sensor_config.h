@@ -1,0 +1,20 @@
+#ifndef SENSOR_CONFIG_H
+#define SENSOR_CONFIG_H
+
+#define SENSOR_ID 2
+
+#define ESPNOW_CHANNEL 1
+#define SEND_INTERVAL_MS 100
+
+#define DHTPIN 22
+#define DHTTYPE DHT11
+#define SOIL_PIN 32
+
+#define SOIL_DRY_VALUE 3600
+#define SOIL_WET_VALUE 1900
+#define SOIL_NUM_SAMPLES 5
+
+#define SERIAL_BAUD_RATE 115200
+#define STATUS_LED_PIN 2
+
+#endif

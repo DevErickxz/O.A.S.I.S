@@ -1,0 +1,31 @@
+#include <DHT.h>
+
+#define DHTPIN 22
+#define DHTTYPE DHT11
+#define SOIL_PIN 32
+
+DHT dht(DHTPIN, DHTTYPE);
+
+void setup() {
+  Serial.begin(115200);
+  dht.begin();
+}
+
+void loop() {
+  float t = dht.readTemperature();
+  float h = dht.readHumidity();
+  int solo = analogRead(SOIL_PIN);
+
+  Serial.print("Temp: ");
+  Serial.print(t);
+  Serial.print(" °C  ");
+
+  Serial.print("Umidade Ar: ");
+  Serial.print(h);
+  Serial.print("%  ");
+
+  Serial.print("Solo: ");
+  Serial.println(solo);
+
+  delay(400);
+}
